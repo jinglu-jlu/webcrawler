@@ -124,8 +124,8 @@ def parse_commandline():
     parser = argparse.ArgumentParser(description=__doc__)
     # add arguments
     parser.add_argument('seeds', metavar='seed url', type=str, nargs='+', help='seed urls (separated by space)')
-    parser.add_argument('-c', '--count', type=int, help='number of pages to crawl')
-    parser.add_argument('-w', '--workers', type=int, help='number of worker threads')
+    parser.add_argument('-c', '--count', type=int, default=DEFAULT_CRAWL_COUNT, help='number of pages to crawl')
+    parser.add_argument('-w', '--workers', type=int, default=DEFAULT_MAX_WORKERS, help='number of worker threads')
     # parse arguments
     return parser.parse_args()
 
@@ -139,12 +139,13 @@ if __name__ == '__main__':
     signal.signal(signal.SIGINT, keyboardInterruptHandler)
     # Parse commandline arguments
     args = parse_commandline()
-    if not args.count or args.count <= 0:
+    if args.count <= 0:
         args.count = DEFAULT_CRAWL_COUNT
-    if not args.workers or args.workers <= 0:
+    if args.workers <= 0:
         args.workers = DEFAULT_MAX_WORKERS
     # Create crawler, a WebCrawler object
     crawler = MyCrawler(args.seeds, args.workers)
     # Start crawling
     crawler.crawl(args.count)
+
 
