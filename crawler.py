@@ -10,7 +10,7 @@ import signal
 import argparse
 
 DEFAULT_CRAWL_COUNT = 100  # default number of pages to crawl
-DEFAULT_MAX_WORKERS = 20  # default number of works for thread pool
+DEFAULT_MAX_WORKERS = 20  # default number of workers for thread pool
 
 
 class MyCrawler:
@@ -21,7 +21,7 @@ class MyCrawler:
         self.__visited = []
         # unvisited URLs
         self.__unvisited = Queue()
-        # number of URLs to crawl
+        # number of URLs crawled
         self.__crawl_count = 0
         # number of worker threads
         self.__max_workers = max_workers
@@ -130,7 +130,7 @@ def parse_commandline():
     return parser.parse_args()
 
 
-# stop crawling when g_stop, a Event object, is set
+# stop crawling when g_stop, an Event object, is set
 g_stop = threading.Event()
 
 
@@ -143,7 +143,7 @@ if __name__ == '__main__':
         args.count = DEFAULT_CRAWL_COUNT
     if args.workers <= 0:
         args.workers = DEFAULT_MAX_WORKERS
-    # Create crawler, a WebCrawler object
+    # Create crawler, a MyCrawler object
     crawler = MyCrawler(args.seeds, args.workers)
     # Start crawling
     crawler.crawl(args.count)
