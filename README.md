@@ -34,7 +34,7 @@ Crawler outputs to both stdout and log. The output is formated as below
 
 ## Install and Build
 ### For Windows
-**Requirements**: Python 3.6 or above is installed and its path is in system path
+**Requirements**: Python 3.6 or above (and pip) is installed and its path is in system path
 1. Download crawler.py and buildcrawler.bat
 2. Run buildcrawler.bat to setup virtualenv to run crawler: buildcrawler.bat
 ### For Other Platforms
