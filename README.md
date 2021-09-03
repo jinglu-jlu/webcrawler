@@ -41,8 +41,8 @@ Crawler outputs to both stdout and log. The output is formated as below
 TBD
 ## Run
 ### For Windows
-1. Run activatecrawler.bat to activate virtualenv (**if not activated yet**) - virtualenv is automatically activated when running buildcrawler.bat
-2. Run crawler - see examples in Usage
+1. Run ***activatecrawler.bat*** to activate virtualenv (**if not activated yet**) - virtualenv is automatically activated when running buildcrawler.bat
+2. Run crawler - **see examples in Usage section**
 
 ### For Other Platforms
 TBD
