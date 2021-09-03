@@ -3,7 +3,7 @@
 Crawler is a simple multi-threaded web crawler which fetches URLs uisng BFS and outputs crawl results to console and log as the crawl proceeds. It starts with a given set of URLs, and keeps crawling until user enter CTRL-C or the number of crawled pages reaches the specified count. This implementation only take URLs from \<a href\> tags and only processes absolute links.
 
 ## Usage
-Crawler accepts one positional argument, and two optional arguments. Run 'python crawler.py -h' for details.
+Crawler accepts one positional argument, and two optional arguments. Run '***python crawler.py -h***' for details.
 
 ![image](https://user-images.githubusercontent.com/17411814/131932976-09a155de-d341-4418-9aa8-ea1b9e73c80a.png)
 
