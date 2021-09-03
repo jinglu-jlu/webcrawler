@@ -15,7 +15,7 @@ Crawler accepts one positional argument, and two optional arguments. Run '***pyt
 * Run crawler with a single seed url and 10 worker threads. Stop after crawling 150 urls.
 
 ***python crawler.py https://source.android.com/setup/start/build-numbers -c 150 -w 10***
-
+Cancel changes
 * Run crawler with two seed urls and 30 work threads. Stop after crawling 300 urls.
 
 ***python crawler.py https://source.android.com/setup/start/build-numbers https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_processors -c 300 -w 30***
@@ -34,13 +34,14 @@ Crawler outputs to both stdout and log. The output is formated as below
 
 ## Install and Build
 ### For Windows
+**Requirements**: Python 3.6 or above is installed and its path is in system path
 1. Download crawler.py and buildcrawler.bat
 2. Run buildcrawler.bat to setup virtualenv to run crawler: buildcrawler.bat
 ### For Other Platforms
 TBD
 ## Run
 ### For Windows
-1. Run activatecrawler.bat to activate virtualenv (if not activated yet)
+1. Run activatecrawler.bat to activate virtualenv (**if not activated yet**) - virtualenv is automatically activated when running buildcrawler.bat
 2. Run crawler - see examples in Usage
 
 ### For Other Platforms
