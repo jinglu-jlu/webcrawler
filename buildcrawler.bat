@@ -9,7 +9,3 @@ REM Create activate.bat
 echo "crawler\Scripts\activate.bat" > activate.bat
 REM Activate virtualenv
 crawler\Scripts\activate.bat
-
-
-
-
