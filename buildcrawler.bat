@@ -1,13 +1,15 @@
 @echo off
-REM Build virutalenv to run crawler
-mkdir crawler
-REM Create a virtualenv
-python3 -m venv /path/to/new/virtual/environment
+REM Creat virtualenv
+python -m venv crawler
+REM Install required packages
+crawler\Scripts\pip.exe install requests
+crawler\Scripts\pip.exe install bs4
+crawler\Scripts\pip.exe install lxml
+REM Create activate.bat
+echo "crawler\Scripts\activate.bat" > activate.bat
 REM Activate virtualenv
 crawler\Scripts\activate.bat
-REM Install required packages
-pip install requests
-pip install bs4
-pip install lxml
-REM Create symbolic link to crawler\Scripts\activate.bat
-mklink activatecrawler crawler\Scripts\activate.bat
+
+
+
+
