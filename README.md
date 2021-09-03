@@ -1,6 +1,6 @@
 # Crawler
 ## Overview
-Crawler is a simple multi-threaded web crawler which fetches URLs uisng BFS and outputs crawl results to console and log as the crawl proceeds. It starts with a given set of URLs, and keeps crawling until user enter CTRL-C or the number of crawled pages reaches the specified count. This implementation only take URLs from \<a href\> tags and only processes absolute links.
+Crawler is a simple multi-threaded web crawler which fetches URLs uisng BFS and outputs crawl results to console and log as the crawl proceeds. It starts with a given set of URLs, and keeps crawling until user enters CTRL-C, or the number of crawled pages reaches the specified count. This implementation only take URLs from \<a href\> tags and only processes absolute links.
 
 ## Usage
 Crawler accepts one positional argument, and two optional arguments. Run '***python crawler.py -h***' for details.
@@ -8,14 +8,14 @@ Crawler accepts one positional argument, and two optional arguments. Run '***pyt
 ![image](https://user-images.githubusercontent.com/17411814/131932976-09a155de-d341-4418-9aa8-ea1b9e73c80a.png)
 
 ### Examples
-* Run crawler with a single seed url and 20 worker threads. Stop after crawling 100 urls.
+* Run crawler with a single seed url and 20 (default) worker threads. Stop after crawling 100 (default) urls.
 
 ***python crawler.py https://source.android.com/setup/start/build-numbers***
 
 * Run crawler with a single seed url and 10 worker threads. Stop after crawling 150 urls.
 
 ***python crawler.py https://source.android.com/setup/start/build-numbers -c 150 -w 10***
-Cancel changes
+
 * Run crawler with two seed urls and 30 work threads. Stop after crawling 300 urls.
 
 ***python crawler.py https://source.android.com/setup/start/build-numbers https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_processors -c 300 -w 30***
