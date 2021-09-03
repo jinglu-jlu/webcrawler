@@ -40,7 +40,7 @@ Crawler outputs to both stdout and log. The output is formated as below
 TBD
 ## Run
 ### For Windows
-1. Run activatecrawler.bat to activate virtualenv (if not activate yet)
+1. Run activatecrawler.bat to activate virtualenv (if not activated yet)
 2. Run crawler - see examples in Usage
 
 ### For other platforms
